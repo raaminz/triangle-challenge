@@ -6,6 +6,9 @@ import com.github.zare88.service.TriangleService;
 
 import java.util.Scanner;
 
+/**
+ * @author ramin zare
+ */
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
