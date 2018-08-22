@@ -1,4 +1,6 @@
-package com.github.zare88.model.shape;
+package com.github.zare88.model.shape.triangle;
+
+import com.github.zare88.model.shape.Shape;
 
 /**
  * @author ramin zare
