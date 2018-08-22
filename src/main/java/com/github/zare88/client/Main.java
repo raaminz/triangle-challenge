@@ -1,8 +1,7 @@
 package com.github.zare88.client;
 
-import com.github.zare88.model.Triangle;
-import com.github.zare88.model.TriangleType;
-import com.github.zare88.service.TriangleService;
+import com.github.zare88.model.shape.Shape;
+import com.github.zare88.service.ShapeFactory;
 
 import java.util.Scanner;
 
@@ -22,18 +21,14 @@ public class Main {
             System.out.println("Enter Side Z:");
             int z = scanner.nextInt();
 
-            Triangle triangle = new Triangle(x, y, z);
-            TriangleType type = TriangleService.getInstance().identifyType(triangle);
+            int[] sides = {x, y, z};
+            Shape type = ShapeFactory.getInstance().makeNewShape(sides);
             printSeparator();
-            if(type == TriangleType.NONE){
-                System.out.println("It's not a triangle at all");
-            }else{
-                System.out.printf("It's %s%n",type.name().toLowerCase());
-            }
+            System.out.printf("It's %s%n", type.name());
             printSeparator();
             System.out.println("Do you want to continue ? (Y/N)");
             //TO Skip enter
-            scanner.next();
+            scanner.nextLine();
             String answer =scanner.nextLine();
             if(!"y".equalsIgnoreCase(answer)){
                 break;

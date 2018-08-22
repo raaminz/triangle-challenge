@@ -1,9 +1,9 @@
-package com.github.zare88.model;
+package com.github.zare88.model.shape;
 
 /**
  * @author ramin zare
  */
-public class Triangle {
+public abstract class Triangle implements Shape {
     private int x;
     private int y;
     private int z;
