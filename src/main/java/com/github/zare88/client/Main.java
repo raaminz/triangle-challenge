@@ -33,7 +33,7 @@ public class Main {
             printSeparator();
             System.out.println("Do you want to continue ? (Y/N)");
             //TO Skip enter
-            scanner.next();
+            scanner.nextLine();
             String answer =scanner.nextLine();
             if(!"y".equalsIgnoreCase(answer)){
                 break;
